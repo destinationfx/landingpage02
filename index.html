@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Trade With Destination Traders</title>
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+    n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+    n.queue=[]; t=b.createElement(e); t.async=!0;
+    t.src=v; s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4221722844754859'); 
+    fbq('track', 'PageView');
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    
+    :root {
+        --overlay: rgba(0, 0, 0, 0.85); 
+        --accent-gold: #e2c05d;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --border-gray: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      background-image: linear-gradient(var(--overlay), var(--overlay)), 
+                        url('https://i.ibb.co/Xr44zBh8/IMG-3163.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .link-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-gray);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .link-card:hover {
+      border-color: var(--accent-gold);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .cta-glow {
+      background: linear-gradient(45deg, #e2c05d, #b8860b);
+      box-shadow: 0 10px 20px rgba(170, 119, 28, 0.3);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <div class="max-w-md w-full text-center p-8 rounded-[30px] border border-[rgba(255,255,255,0.1)] backdrop-blur-md">
+    
+    <div class="mb-6">
+      <div class="relative inline-block">
+        <img alt="Logo" class="mx-auto rounded-2xl border-2 border-[#aa771c] shadow-2xl" height="120" src="https://i.ibb.co/qMBGyySZ/Whats-App-Image-2026-04-15-at-11-13-44-AM.jpg" width="120"/>
+      </div>
+      <h1 class="text-2xl font-extrabold mt-4 tracking-widest gold-gradient-text uppercase">
+        DESTINATION TRADERS
+      </h1>
+      <p class="text-gray-400 text-xs uppercase tracking-widest mt-1">Professional Trading Mentor</p>
+    </div>
+
+    <div class="space-y-3 mb-8">
+      <div class="link-card p-4 rounded-xl flex items-center text-left">
+        <span class="mr-3">📈</span>
+        <span class="text-gray-200 text-sm font-medium">Step-by-Step Market Learning Approach</span>
+      </div>
+      <div class="link-card p-4 rounded-xl flex items-center text-left">
+        <span class="mr-3">📊</span>
+        <span class="text-gray-200 text-sm font-medium">Daily Educational Market Insights</span>
+      </div>
+      <div class="link-card p-4 rounded-xl flex items-center text-left">
+        <span class="mr-3">🎯</span>
+        <span class="text-gray-200 text-sm font-medium">Strategy-Based Trade Planning Concepts</span>
+      </div>
+      <div class="link-card p-4 rounded-xl flex items-center text-left">
+        <span class="mr-3">🧠</span>
+        <span class="text-gray-200 text-sm font-medium">Risk Management Concepts</span>
+      </div>
+      <div class="link-card p-4 rounded-xl flex items-center text-left">
+        <span class="mr-3">📚</span>
+        <span class="text-gray-200 text-sm font-medium">Beginner to Advanced Learning Support</span>
+      </div>
+    </div>
+
+    <a href="http://t.me/destination_traders1" 
+       class="cta-glow block w-full text-black font-extrabold py-4 rounded-full text-sm tracking-widest transition-all active:scale-95"
+       onclick="fbq('trackCustom', 'JoinNowClicked');">
+       JOIN PRIVATE LEARNING COMMUNITY
+    </a>
+
+    <div class="mt-6 text-[10px] uppercase tracking-widest">
+      <span class="text-red-500 font-bold">Limited Access</span>
+      <span class="text-gray-600 mx-2">•</span>
+      <span class="text-gray-400">Members Joining Fast</span>
+    </div>
+    
+    <p class="text-gray-600 text-[10px] mt-4">
+        Invitation closes in <span id="countdown" class="text-red-500 font-bold">10</span>s
+    </p>
+
+  </div>
+
+  <script>
+    let timeLeft = 10;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+      } else {
+        countdownEl.textContent = timeLeft;
+      }
+      timeLeft -= 1;
+    }, 1000);
+  </script>
+
+</body>
+</html>
